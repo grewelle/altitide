@@ -1,0 +1,65 @@
+# Okeke LLC Website
+# https://okeke.us
+
+# Standard crawlers - allow everything
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://okeke.us/sitemap.xml
+
+# ===========================================
+# AI Search & LLM Crawlers
+# ===========================================
+# These bots power AI search features (Google AI Overviews,
+# Bing Copilot, ChatGPT, Perplexity, etc.)
+# Allowing them helps your content appear in AI-generated answers
+
+# Google AI (Gemini, AI Overviews)
+User-agent: Google-Extended
+Allow: /
+
+# OpenAI (ChatGPT, SearchGPT)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+# Anthropic (Claude)
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+
+# Microsoft/Bing AI (Copilot)
+User-agent: Bingbot
+Allow: /
+
+# Meta AI
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+# Apple (Siri, Spotlight)
+User-agent: Applebot
+Allow: /
+
+# Common Crawl (used to train many AI models)
+User-agent: CCBot
+Allow: /
+
+# Cohere AI
+User-agent: cohere-ai
+Allow: /
+
+# You.com
+User-agent: YouBot
+Allow: /

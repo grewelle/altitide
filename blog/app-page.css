@@ -1,0 +1,185 @@
+/* ============================================
+   App Landing Page Styles
+   ============================================ */
+
+.app-page {
+    padding-top: calc(var(--spacing-xl) + 60px);
+    padding-bottom: var(--spacing-2xl);
+    min-height: 100vh;
+}
+
+.back-link {
+    display: inline-block;
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+    margin-bottom: var(--spacing-lg);
+}
+
+.back-link:hover {
+    color: var(--color-text);
+}
+
+/* App Hero */
+.app-hero {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-2xl);
+    padding-bottom: var(--spacing-2xl);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.app-hero-icon {
+    flex-shrink: 0;
+    width: 128px;
+    height: 128px;
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+}
+
+.app-hero-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.app-hero-content {
+    flex: 1;
+}
+
+.app-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.app-tagline {
+    font-size: 1.25rem;
+    color: var(--color-text-muted);
+    margin-bottom: var(--spacing-md);
+}
+
+.app-hero-cta {
+    margin-top: var(--spacing-md);
+}
+
+.app-store-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.app-store-btn svg {
+    flex-shrink: 0;
+}
+
+/* App Sections */
+.app-section {
+    margin-bottom: var(--spacing-2xl);
+}
+
+.app-section h2 {
+    margin-bottom: var(--spacing-md);
+}
+
+.app-section > p {
+    color: var(--color-text-muted);
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    max-width: 700px;
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Feature Grid */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+.feature {
+    padding: var(--spacing-md);
+    background: var(--color-bg-alt);
+    border-radius: var(--radius-md);
+}
+
+.feature-icon {
+    font-size: 1.75rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.feature h3 {
+    font-size: 1rem;
+    margin-bottom: var(--spacing-xs);
+}
+
+.feature p {
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+}
+
+/* Use Cases */
+.use-cases {
+    list-style: none;
+    max-width: 600px;
+}
+
+.use-cases li {
+    padding: var(--spacing-sm) 0;
+    border-bottom: 1px solid var(--color-border-light);
+    color: var(--color-text-muted);
+}
+
+.use-cases li:last-child {
+    border-bottom: none;
+}
+
+.use-cases strong {
+    color: var(--color-text);
+    font-weight: 500;
+}
+
+/* CTA Section */
+.app-cta-section {
+    text-align: center;
+    padding: var(--spacing-2xl);
+    background: var(--color-bg-alt);
+    border-radius: var(--radius-lg);
+}
+
+.app-cta-section h2 {
+    margin-bottom: var(--spacing-xs);
+}
+
+.app-cta-section p {
+    margin: 0 auto var(--spacing-md);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .app-hero {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .app-hero-icon {
+        width: 100px;
+        height: 100px;
+        border-radius: 22px;
+    }
+
+    .app-hero h1 {
+        font-size: 2rem;
+    }
+
+    .app-platforms {
+        justify-content: center;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+}

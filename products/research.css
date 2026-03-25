@@ -1,0 +1,262 @@
+/* ============================================
+   Research Page Styles
+   ============================================ */
+
+.page-content {
+    padding-top: 60px;
+}
+
+.page-hero {
+    padding: var(--spacing-2xl) 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.page-hero h1 {
+    margin-bottom: var(--spacing-sm);
+}
+
+.page-subtitle {
+    font-size: 1.25rem;
+    color: var(--color-text-muted);
+    max-width: 700px;
+    line-height: 1.6;
+}
+
+.back-link {
+    display: inline-block;
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.back-link:hover {
+    color: var(--color-text);
+}
+
+/* Philosophy Block */
+.philosophy-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-xl);
+    align-items: center;
+}
+
+.philosophy-block {
+    max-width: 800px;
+    padding: var(--spacing-xl);
+    background: var(--color-bg-alt);
+    border-radius: var(--radius-lg);
+}
+
+.philosophy-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    box-shadow: var(--shadow-lg);
+}
+
+@media (max-width: 768px) {
+    .philosophy-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .philosophy-image {
+        order: -1;
+    }
+}
+
+.philosophy-block h2 {
+    margin-bottom: var(--spacing-md);
+}
+
+.philosophy-block p {
+    color: var(--color-text-muted);
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    margin-bottom: var(--spacing-md);
+}
+
+.philosophy-block p:last-child {
+    margin-bottom: 0;
+}
+
+/* Research Grid */
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+.research-card {
+    background: white;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    transition: all var(--transition);
+}
+
+.research-card:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.research-card-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-sm);
+}
+
+.research-icon {
+    font-size: 1.75rem;
+}
+
+.research-card h3 {
+    font-size: 1.25rem;
+    margin: 0;
+}
+
+.research-card > p {
+    color: var(--color-text-muted);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+    margin-bottom: var(--spacing-md);
+}
+
+.research-details {
+    margin-bottom: var(--spacing-md);
+}
+
+.research-details h4 {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+    margin-bottom: var(--spacing-xs);
+}
+
+.research-details ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.research-details li {
+    font-size: 0.9375rem;
+    color: var(--color-text);
+    padding: 0.375rem 0;
+    padding-left: 1.25rem;
+    position: relative;
+}
+
+.research-details li::before {
+    content: "→";
+    position: absolute;
+    left: 0;
+    color: var(--color-text-light);
+}
+
+.research-tags-small {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding-top: var(--spacing-sm);
+    border-top: 1px solid var(--color-border-light);
+}
+
+.research-tags-small span {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--color-text-muted);
+    background: var(--color-bg-alt);
+    padding: 0.25rem 0.625rem;
+    border-radius: 4px;
+}
+
+/* Technologies Section */
+.technologies-section {
+    background: var(--color-bg-alt);
+}
+
+.tech-categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-lg);
+}
+
+.tech-category h3 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+    margin-bottom: var(--spacing-sm);
+}
+
+.tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.tech-list span {
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--color-text);
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--color-border);
+}
+
+/* CTA Section */
+.cta-section {
+    background: var(--color-bg);
+}
+
+.cta-block {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: var(--spacing-2xl);
+    background: var(--color-bg-dark);
+    border-radius: var(--radius-lg);
+    color: white;
+}
+
+.cta-block h2 {
+    color: white;
+    margin-bottom: var(--spacing-sm);
+}
+
+.cta-block p {
+    color: rgba(255,255,255,0.7);
+    margin-bottom: var(--spacing-md);
+}
+
+.cta-block .btn-primary {
+    background: white;
+    color: var(--color-text);
+}
+
+.cta-block .btn-primary:hover {
+    background: var(--color-bg-alt);
+}
+
+/* Active nav state */
+.nav-links a.active {
+    color: var(--color-text);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .research-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .philosophy-block {
+        padding: var(--spacing-md);
+    }
+}

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Nutidal</title>
+    <meta name="description" content="Explore our blog.">
+    <meta name="keywords" content="blog, newsletter">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Blog | Nutidal">
+    <meta property="og:description" content="blog">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nutidal.com/blog/">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Blog | Nutidal">
+    <meta name="twitter:description" content="blog">
+
+    <link rel="canonical" href="https://nutidal.com/blog/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="apps.css">
+    <link rel="icon" href="/images/nutidal_logo_circle.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Snowfall Canvas -->
+    <canvas id="snowfall" aria-hidden="true"></canvas>
+
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <img src="/images/nutidal_logo_circle.png" alt="Nutidal LLC" width="50" height="50">
+                Nutidal
+            </a>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/services/">Services</a>
+                <a href="/products/">Products</a>
+                <a href="/blog/" class="active">Blog</a>
+                <a href="/about/">About</a>
+                <a href="/contact/" class="nav-cta">Get in Touch</a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="page-content">
+        <header class="page-hero">
+            <div class="container">
+                <a href="/" class="back-link">← Home</a>
+                <h1>Homebrew Science</h1>
+                <p class="page-subtitle">Founders, scientists, products, startups, and market news.</p>
+            </div>
+        </header>
+
+
+        <!-- Consumer Blog Section -->
+        <section class="section blog-full-section">
+            <div class="container">
+                <h2>Recent Posts</h2>
+                <p class="section-subtitle">Stay up to date.</p>
+
+                <div class="apps-full-grid">
+                    <!-- Launch -->
+                    <article class="app-full-card">
+                        <div class="app-full-icon" role="img" aria-label="Launch">
+                            <img src="/images/nutidal_logo_circle.png" alt="Launch" width="120" height="120" loading="lazy">
+                        </div>
+                        <div class="app-full-content">
+                            <div class="app-platforms">
+                                <span class="platform">03.12.2026</span>
+                            </div>
+                            <h3>Launch</h3>
+                            <p class="app-tagline">Nutidal's business is in order.</p>
+                            <p class="app-description">Website is launched after setting up the business essentials. First blog post coming soon.</p>
+                    
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section all-blog-section">
+            <div class="container">
+                <h3>Previous Posts</h3>
+
+                <div class="blog-grid-compact">
+                    <!-- Place holder -->
+                    <article class="app-compact-card">
+                        
+                    </article>
+
+
+                </div>
+            </div>
+        </section>
+
+        
+
+        <section class="section cta-section">
+            <div class="container">
+                <div class="cta-block">
+                    <h2>Want to feature your business or ideas?</h2>
+                    <p>Let's talk about it.</p>
+                    <a href="/contact/" class="btn btn-primary btn-large">Get in Touch</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="footer-logo">Nutidal LLC</span>
+                    <p>Building biotech that works.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="/services/">Services</a>
+                    <a href="/products/">Products</a>
+                    <a href="/blog/">Blog</a>
+                    <a href="/about/">About</a>
+                    <a href="/contact/">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Nutidal LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile nav toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+
+        // Navbar background on scroll
+        const nav = document.querySelector('.nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Snowfall Animation
+        const canvas = document.getElementById('snowfall');
+        const ctx = canvas.getContext('2d');
+        let snowflakes = [];
+        const maxSnowflakes = 0;
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        function createSnowflake() {
+            return {
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height - canvas.height,
+                radius: Math.random() * 3 + 1,
+                speed: Math.random() * 1 + 0.5,
+                wind: Math.random() * 0.5 - 0.25,
+                opacity: Math.random() * 0.2 + 0.15
+            };
+        }
+
+        function initSnowflakes() {
+            snowflakes = [];
+            for (let i = 0; i < maxSnowflakes; i++) {
+                const flake = createSnowflake();
+                flake.y = Math.random() * canvas.height;
+                snowflakes.push(flake);
+            }
+        }
+
+        function drawSnowflakes() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            snowflakes.forEach((flake, index) => {
+                ctx.beginPath();
+                ctx.arc(flake.x, flake.y, flake.radius, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(173, 216, 230, ${flake.opacity})`;
+                ctx.fill();
+                flake.y += flake.speed;
+                flake.x += flake.wind;
+                if (flake.y > canvas.height) snowflakes[index] = createSnowflake();
+                if (flake.x > canvas.width) flake.x = 0;
+                else if (flake.x < 0) flake.x = canvas.width;
+            });
+            requestAnimationFrame(drawSnowflakes);
+        }
+
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (!prefersReducedMotion) {
+            resizeCanvas();
+            initSnowflakes();
+            drawSnowflakes();
+            window.addEventListener('resize', () => { resizeCanvas(); initSnowflakes(); });
+        }
+    </script>
+</body>
+</html>

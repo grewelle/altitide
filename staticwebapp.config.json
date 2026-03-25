@@ -1,0 +1,50 @@
+{
+  "navigationFallback": {
+    "rewrite": "/index.html",
+    "exclude": ["*.css", "*.js", "*.png", "*.jpg", "*.jpeg", "*.gif", "*.svg", "*.ico", "*.xml", "*.txt", "*.json", "*.woff", "*.woff2"]
+  },
+  "routes": [
+    {
+      "route": "/services",
+      "redirect": "/services/",
+      "statusCode": 301
+    },
+    {
+      "route": "/research",
+      "redirect": "/research/",
+      "statusCode": 301
+    },
+    {
+      "route": "/apps",
+      "redirect": "/apps/",
+      "statusCode": 301
+    },
+    {
+      "route": "/about",
+      "redirect": "/about/",
+      "statusCode": 301
+    },
+    {
+      "route": "/contact",
+      "redirect": "/contact/",
+      "statusCode": 301
+    }
+  ],
+  "responseOverrides": {
+    "404": {
+      "rewrite": "/index.html",
+      "statusCode": 200
+    }
+  },
+  "globalHeaders": {
+    "X-Content-Type-Options": "nosniff",
+    "X-Frame-Options": "DENY",
+    "X-XSS-Protection": "1; mode=block",
+    "Referrer-Policy": "strict-origin-when-cross-origin",
+    "Permissions-Policy": "accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=()"
+  },
+  "mimeTypes": {
+    ".json": "application/json",
+    ".xml": "application/xml"
+  }
+}

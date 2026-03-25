@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Nutidal</title>
+    <meta name="description" content="Get in touch with Nutidal. Let's talk about your project, technical challenges, or how we can help your business grow.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Contact Us | Nutidal">
+    <meta property="og:description" content="Let's talk about your project and how we can help.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nutidal.com/contact/">
+    <meta property="og:image" content="https://nutidal.com/images/partnership-handshake.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="800">
+    <meta property="og:image:alt" content="Business partnership - Contact Nutidal">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact Us | Nutidal">
+    <meta name="twitter:description" content="Let's talk about your project and how we can help.">
+    <meta name="twitter:image" content="https://nutidal.com/images/partnership-handshake.jpg">
+
+    <link rel="canonical" href="https://nutidal.com/contact/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="icon" href="/images/nutidal_logo_circle.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Snowfall Canvas -->
+    <canvas id="snowfall" aria-hidden="true"></canvas>
+
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <img src="/images/nutidal_logo_circle.png" alt="Nutidal" width="50" height="50">
+                Nutidal
+            </a>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/services/">Services</a>
+                <a href="/products/">Products</a>
+                <a href="/blog/">Blog</a>
+                <a href="/about/">About</a>
+                <a href="/contact/" class="nav-cta active">Get in Touch</a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="page-content">
+        <header class="page-hero">
+            <div class="container">
+                <a href="/" class="back-link">← Home</a>
+                <h1>Let's Talk</h1>
+                <p class="page-subtitle">Have a project in mind? Need help with technical challenges? Just want to connect? Let's do a free consultation.</p>
+            </div>
+        </header>
+
+        <section class="section contact-main">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h2>Send Us a Message</h2>
+                        <p>Fill out the form below and we'll get back to you within 24 hours.</p>
+
+                        <form class="contact-form" action="https://formspree.io/f/xpqyrbvd" method="POST">
+                            <!-- Honeypot field - hidden from users, catches bots -->
+                            <input type="text" name="_gotcha" style="display:none">
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Name <span class="required">*</span></label>
+                                    <input type="text" id="name" name="name" required placeholder="Jane Doe">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email <span class="required">*</span></label>
+                                    <input type="email" id="email" name="email" required placeholder="jane@company.com">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="company">Company <span class="optional">(optional)</span></label>
+                                <input type="text" id="company" name="company" placeholder="Your company name">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Tell us about your project <span class="required">*</span></label>
+                                <textarea id="message" name="message" rows="5" required placeholder="What are you looking to build? What challenges are you facing? Any timeline considerations?"></textarea>
+                            </div>
+
+                            <div class="form-footer">
+                                <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+                                <p class="form-note">We typically respond within 24 hours.</p>
+                            </div>
+                        </form>
+
+                        <div class="contact-alt">
+                            <p>Or reach us directly:</p>
+                            <div class="contact-methods">
+                                <a href="mailto:contact@nutidal.com" class="contact-link">contact@nutidal.com</a>
+                                <a href="https://www.linkedin.com/company/nutidal/" class="contact-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+    
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="footer-logo">Nutidal LLC</span>
+                    <p>Building biotech that works.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="/services/">Services</a>
+                    <a href="/products/">Products</a>
+                    <a href="/blog/">Blog</a>
+                    <a href="/about/">About</a>
+                    <a href="/contact/">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Nutidal LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile nav toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+
+        // Navbar background on scroll
+        const nav = document.querySelector('.nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Snowfall Animation
+        const canvas = document.getElementById('snowfall');
+        const ctx = canvas.getContext('2d');
+        let snowflakes = [];
+        const maxSnowflakes = 0;
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        function createSnowflake() {
+            return {
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height - canvas.height,
+                radius: Math.random() * 3 + 1,
+                speed: Math.random() * 1 + 0.5,
+                wind: Math.random() * 0.5 - 0.25,
+                opacity: Math.random() * 0.2 + 0.15
+            };
+        }
+
+        function initSnowflakes() {
+            snowflakes = [];
+            for (let i = 0; i < maxSnowflakes; i++) {
+                const flake = createSnowflake();
+                flake.y = Math.random() * canvas.height;
+                snowflakes.push(flake);
+            }
+        }
+
+        function drawSnowflakes() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            snowflakes.forEach((flake, index) => {
+                ctx.beginPath();
+                ctx.arc(flake.x, flake.y, flake.radius, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(173, 216, 230, ${flake.opacity})`;
+                ctx.fill();
+                flake.y += flake.speed;
+                flake.x += flake.wind;
+                if (flake.y > canvas.height) snowflakes[index] = createSnowflake();
+                if (flake.x > canvas.width) flake.x = 0;
+                else if (flake.x < 0) flake.x = canvas.width;
+            });
+            requestAnimationFrame(drawSnowflakes);
+        }
+
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (!prefersReducedMotion) {
+            resizeCanvas();
+            initSnowflakes();
+            drawSnowflakes();
+            window.addEventListener('resize', () => { resizeCanvas(); initSnowflakes(); });
+        }
+    </script>
+</body>
+</html>

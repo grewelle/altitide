@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products | Nutidal</title>
+    <meta name="description" content="Explore our products.">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Products | Nutidal">
+    <meta property="og:description" content="Our products.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nutidal.com/products/">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Products | Nutidal">
+    <meta name="twitter:description" content="Our products.">
+    <meta name="twitter:image" content="https://nutidal.com/images/innovation-lightbulb.jpg">
+    <meta property="og:image" content="https://nutidal.com/images/innovation-lightbulb.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="834">
+    <meta property="og:image:alt" content="Products">
+
+    <link rel="canonical" href="https://nutidal.com/products/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="research.css">
+    <link rel="icon" href="/images/nutidal_logo_circle.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Snowfall Canvas -->
+    <canvas id="snowfall" aria-hidden="true"></canvas>
+
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <img src="/images/nutidal_logo_circle.png" alt="Nutidal" width="50" height="50">
+                Nutidal
+            </a>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/services/">Services</a>
+                <a href="/research/" class="active">Products</a>
+                <a href="/blog/">Blog</a>
+                <a href="/about/">About</a>
+                <a href="/contact/" class="nav-cta">Get in Touch</a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="page-content">
+        <header class="page-hero">
+            <div class="container">
+                <a href="/" class="back-link">← Home</a>
+                <h1>Products</h1>
+                <p class="page-subtitle">Technology changes fast. Staying relevant means continuous learning, experimentation, and building. Here's what we're focused on.</p>
+            </div>
+        </header>
+
+        <section class="section">
+            <div class="container">
+                <div class="philosophy-grid">
+                    <div class="philosophy-block">
+                        <h2>Our Philosophy</h2>
+                        <p>Products we build are intended to transform workflows and deliver robust, reliable results everytime. We start with clients and build around your needs.</p>
+                    </div>
+                    <div class="philosophy-image">
+                        <img src="/images/partnership-handshake.jpg" alt="Working together" width="1200" height="834" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2>Current Products</h2>
+
+                <div class="research-grid">
+                    <!-- Announcement coming soon -->
+                    <article class="research-card">
+                        <div class="research-card-header">
+                            <span class="research-icon">🤖</span>
+                            <h3>Announcement coming soon</h3>
+                        </div>
+                        <p>Pending product launch</p>
+                    </article>
+
+                   
+
+        <section class="section cta-section">
+            <div class="container">
+                <div class="cta-block">
+                    <h2>Want to work together?</h2>
+                    <p>Whether you need help with a specific technology or want a partner who stays current, let's talk about your project.</p>
+                    <a href="/contact/" class="btn btn-primary btn-large">Free Consultation</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="footer-logo">Nutidal LLC</span>
+                    <p>Building biotech that works.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="/services/">Services</a>
+                    <a href="/research/">Products</a>
+                    <a href="/blog/">Blog</a>
+                    <a href="/about/">About</a>
+                    <a href="/contact/">Contact</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Nutidal LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile nav toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelector('.nav-links');
+        navToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+
+        // Navbar background on scroll
+        const nav = document.querySelector('.nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Snowfall Animation
+        const canvas = document.getElementById('snowfall');
+        const ctx = canvas.getContext('2d');
+        let snowflakes = [];
+        const maxSnowflakes = 0;
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        function createSnowflake() {
+            return {
+                x: Math.random() * canvas.width,
+                y: Math.random() * canvas.height - canvas.height,
+                radius: Math.random() * 3 + 1,
+                speed: Math.random() * 1 + 0.5,
+                wind: Math.random() * 0.5 - 0.25,
+                opacity: Math.random() * 0.2 + 0.15
+            };
+        }
+
+        function initSnowflakes() {
+            snowflakes = [];
+            for (let i = 0; i < maxSnowflakes; i++) {
+                const flake = createSnowflake();
+                flake.y = Math.random() * canvas.height;
+                snowflakes.push(flake);
+            }
+        }
+
+        function drawSnowflakes() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            snowflakes.forEach((flake, index) => {
+                ctx.beginPath();
+                ctx.arc(flake.x, flake.y, flake.radius, 0, Math.PI * 2);
+                ctx.fillStyle = `rgba(173, 216, 230, ${flake.opacity})`;
+                ctx.fill();
+                flake.y += flake.speed;
+                flake.x += flake.wind;
+                if (flake.y > canvas.height) snowflakes[index] = createSnowflake();
+                if (flake.x > canvas.width) flake.x = 0;
+                else if (flake.x < 0) flake.x = canvas.width;
+            });
+            requestAnimationFrame(drawSnowflakes);
+        }
+
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        if (!prefersReducedMotion) {
+            resizeCanvas();
+            initSnowflakes();
+            drawSnowflakes();
+            window.addEventListener('resize', () => { resizeCanvas(); initSnowflakes(); });
+        }
+    </script>
+</body>
+</html>
