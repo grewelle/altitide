@@ -439,8 +439,8 @@ h3 {
 
 .app-icon {
     flex-shrink: 0;
-    width: 72px;
-    height: 72px;
+    width: 240px;
+    height: 240px;
     border-radius: var(--radius-md);
     overflow: hidden;
     background: var(--color-bg-alt);
