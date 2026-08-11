@@ -1,201 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog | Altitide</title>
-    <meta name="description" content="Explore our blog.">
-    <meta name="keywords" content="blog, newsletter">
-    <meta name="robots" content="noindex">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="Blog | Altitide">
-    <meta property="og:description" content="blog">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://altitide.com/newsletter/">
-
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Newsletter | Altitide">
-    <meta name="twitter:description" content="newsletter">
-
-    <link rel="canonical" href="https://altitide.com/newsletter/">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../styles.css">
-    <link rel="stylesheet" href="../blog/apps.css">
-    <link rel="icon" href="/images/altitideLogo.png" type="image/x-icon">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Altitide Investor Update — August 2026</title>
+<style>
+body{margin:0;background:#f3f5f7;color:#17202a;font-family:Arial,Helvetica,sans-serif}
+.wrap{max-width:760px;margin:auto;background:#fff}.hero{background:#0b0d10;color:#fff;padding:48px 54px}
+.brand{font-size:28px;font-weight:700;letter-spacing:2px}.eyebrow{margin-top:32px;color:#aeb7c2;font-size:12px;font-weight:700;letter-spacing:2px;text-transform:uppercase}
+h1{font-size:42px;line-height:1.08;margin:12px 0 18px}.hero p{color:#d6dbe0;font-size:17px;line-height:1.55;margin:0}
+.content{padding:42px 54px}h2{font-size:25px;margin:0 0 16px}p{font-size:16px;line-height:1.65;color:#4b5563}
+.highlight{background:#f0edf7;border-left:4px solid #7c63a8;padding:22px 24px;margin:28px 0 36px}
+.partners{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:26px 0 34px}
+.card{border:1px solid #e4e7eb;border-radius:12px;padding:22px}.num{display:inline-block;width:28px;height:28px;line-height:28px;text-align:center;border-radius:50%;background:#111827;color:#fff;font-size:13px;font-weight:bold;margin-bottom:15px}
+.card h3{margin:0 0 8px;font-size:17px}.card p{margin:0;font-size:14px;line-height:1.5}
+.metric{background:#111827;color:#fff;border-radius:14px;padding:27px;margin:34px 0}.big{font-size:38px;font-weight:700}.label{color:#c7cdd4;font-size:14px;margin-top:5px}
+.next{border-top:1px solid #e5e7eb;padding-top:30px;margin-top:38px}.footer{background:#f7f7f8;padding:30px 54px;color:#6b7280;font-size:12px;line-height:1.6}
+@media(max-width:620px){.hero,.content,.footer{padding-left:25px;padding-right:25px}h1{font-size:34px}.partners{grid-template-columns:1fr}}
+</style>
 </head>
-<body>
-    <!-- Snowfall Canvas -->
-    <canvas id="snowfall" aria-hidden="true"></canvas>
-
-    <nav class="nav">
-        <div class="nav-container">
-            <a href="/" class="nav-logo">
-                <img src="/images/altitideLogo.png" alt="Altitide LLC" width="50" height="50">
-                Altitide
-            </a>
-            <div class="nav-links">
-                <a href="/">Home</a>
-                <a href="/products/">Products</a>
-                <a href="/blog/" class="active">Blog</a>
-                <a href="/services/">Services</a>
-                <a href="/about/">About</a>
-                <a href="/contact/" class="nav-cta">Get in Touch</a>
-            </div>
-            <button class="nav-toggle" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </nav>
-
-    <main class="page-content">
-        <header class="page-hero">
-            <div class="container">
-                <a href="/" class="back-link">← Home</a>
-                <h1>High Tidings</h1>
-                <p class="page-subtitle">Our monthly newsletter for investors, employees, and affiliates</p>
-            </div>
-        </header>
-
-
-        <!-- Consumer Blog Section -->
-        <section class="section apps-full-section">
-            <div class="container">
-                <h2>Recent Posts</h2>
-                <p class="section-subtitle">Stay informed.</p>
-
-                <div class="apps-full-grid">
-                    <!-- Launch -->
-
-                    <article class="app-full-card">
-                        <div class="app-full-content">
-                             <div class="app-platforms">
-                                <span class="platform">08.10.2026</span>
-                            </div>
-                            <h3>August</h3>
-                            <p class="app-tagline">Altitide recruits beta testing partners spanning industrial, academic, international, and core users.</p>
-                            <p class="app-description">Your contributions to our company not only provide vital fuel for growth but also signifies your belief in our team, our products/services, and our mission. We are deeply grateful for the trust you have placed in us.</p>
-                        </div>
-                    </article>
-
-                    
-                </div>
-            </div>
-        </section>
-
-        <section class="section all-blog-section">
-            <div class="container">
-                <h3>Previous Letters</h3>
-
-                <div class="blog-grid-compact">
-                    <!-- Place holder -->
-                    <article class="app-compact-card">
-                        
-                    </article>
-
-
-                </div>
-            </div>
-        </section>
-
-        
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <span class="footer-logo">Altitide LLC</span>
-                    <p>High quality, high throughput nucleotide technologies.</p>
-                </div>
-                <div class="footer-links">
-                    <a href="/products/">Products</a>
-                    <a href="/blog/">Blog</a>
-                    <a href="/services/">Services</a>
-                    <a href="/about/">About</a>
-                    <a href="/contact/">Contact</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Altitide LLC. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Mobile nav toggle
-        const navToggle = document.querySelector('.nav-toggle');
-        const navLinks = document.querySelector('.nav-links');
-        navToggle.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            navToggle.classList.toggle('active');
-        });
-
-        // Navbar background on scroll
-        const nav = document.querySelector('.nav');
-        window.addEventListener('scroll', () => {
-            nav.classList.toggle('scrolled', window.scrollY > 50);
-        });
-
-        // Snowfall Animation
-        const canvas = document.getElementById('snowfall');
-        const ctx = canvas.getContext('2d');
-        let snowflakes = [];
-        const maxSnowflakes = 0;
-
-        function resizeCanvas() {
-            canvas.width = window.innerWidth;
-            canvas.height = window.innerHeight;
-        }
-
-        function createSnowflake() {
-            return {
-                x: Math.random() * canvas.width,
-                y: Math.random() * canvas.height - canvas.height,
-                radius: Math.random() * 3 + 1,
-                speed: Math.random() * 1 + 0.5,
-                wind: Math.random() * 0.5 - 0.25,
-                opacity: Math.random() * 0.2 + 0.15
-            };
-        }
-
-        function initSnowflakes() {
-            snowflakes = [];
-            for (let i = 0; i < maxSnowflakes; i++) {
-                const flake = createSnowflake();
-                flake.y = Math.random() * canvas.height;
-                snowflakes.push(flake);
-            }
-        }
-
-        function drawSnowflakes() {
-            ctx.clearRect(0, 0, canvas.width, canvas.height);
-            snowflakes.forEach((flake, index) => {
-                ctx.beginPath();
-                ctx.arc(flake.x, flake.y, flake.radius, 0, Math.PI * 2);
-                ctx.fillStyle = `rgba(173, 216, 230, ${flake.opacity})`;
-                ctx.fill();
-                flake.y += flake.speed;
-                flake.x += flake.wind;
-                if (flake.y > canvas.height) snowflakes[index] = createSnowflake();
-                if (flake.x > canvas.width) flake.x = 0;
-                else if (flake.x < 0) flake.x = canvas.width;
-            });
-            requestAnimationFrame(drawSnowflakes);
-        }
-
-        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        if (!prefersReducedMotion) {
-            resizeCanvas();
-            initSnowflakes();
-            drawSnowflakes();
-            window.addEventListener('resize', () => { resizeCanvas(); initSnowflakes(); });
-        }
-    </script>
-</body>
-</html>
+<body><div class="wrap">
+<header class="hero"><div class="brand">ALTITIDE</div>
+<div class="eyebrow">Newsletter · August 2026</div>
+<h1>Four beta partners. One major step toward scalable DNA preparation.</h1>
+<p>Altitide is moving from internal development toward real-world validation with four organizations spanning sequencing, academic research, diagnostics, and natural-history research.</p>
+</header>
+<main class="content">
+<div class="highlight"><strong>The takeaway:</strong> Our beta program is designed to test whether a simpler, automation-friendly approach to high-molecular-weight DNA extraction can perform reliably across diverse sample types and laboratory environments.</div>
+<h2>Our four beta testing partners</h2>
+<p>The strength of this group is its diversity. We are putting the technology in the hands of teams with different applications and operating requirements.</p>
+<section class="partners">
+<div class="card"><div class="num">01</div><h3>UC San Diego Sequencing Core</h3><p>A sequencing-focused environment provides an important test of DNA quality and compatibility with downstream genomic workflows.</p></div>
+<div class="card"><div class="num">02</div><h3>Pomona College</h3><p>An academic research setting helps evaluate usability, accessibility, and reproducibility outside a highly specialized core facility.</p></div>
+<div class="card"><div class="num">03</div><h3>Strand ID</h3><p>A diagnostic-oriented partner gives Altitide an opportunity to explore sample-preparation requirements where workflow simplicity and consistency are especially important.</p></div>
+<div class="card"><div class="num">04</div><h3>National Museum of Natural Sciences, Spain</h3><p>Natural-history applications expand testing into diverse biological samples, providing a valuable stress test for the platform.</p></div>
+</section>
+<div class="metric"><div class="big">1 → 1,000s</div><div class="label">Our product vision: a high-molecular-weight DNA workflow that can scale from individual samples to thousands of samples using standard liquid-handling infrastructure.</div></div>
+<h2>Why the beta program matters</h2>
+<p>Altitide is developing a different approach to DNA purification: minimize physical handling of DNA while eliminating unnecessary equipment and consumables. The goal is a workflow that can be performed with a pipette or liquid handler, without requiring centrifuges, specialized plates, or mechanical mixers.</p>
+<p>The beta program will help us quantify performance, identify edge cases, refine protocols, and determine where the platform delivers the greatest customer value. Feedback from independent users will also shape the product before broader commercial launch.</p>
+<div class="next"><h2>What comes next</h2>
+<p>Over the coming months, we expect to focus on <strong>beta validation, protocol optimization, and preparation for commercial launch.</strong> We will share results as data become available, including performance benchmarks and lessons learned from partner workflows.</p>
+<p>We believe the opportunity is larger than a single extraction kit. A simpler, scalable sample-preparation layer could become valuable infrastructure for sequencing, diagnostics, research, and other applications where high-quality DNA is the starting point.</p></div>
+</main>
+<footer class="footer"><strong>ALTITIDE LLC</strong><br>Newsletter · August 2026<br><br>This communication is for informational purposes. Statements regarding future products, validation, commercialization, performance, or market opportunity are forward-looking and subject to change. Beta-partner participation does not imply endorsement or commercial adoption unless separately stated.</footer>
+</div></body></html>
