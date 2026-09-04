@@ -1,0 +1,10 @@
+{
+  "name": "altitide-moon-jelly-waitlist",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Altitide Moon Jelly waitlist landing page with automated email confirmation.",
+  "scripts": {},
+  "engines": {
+    "node": ">=18"
+  }
+}
