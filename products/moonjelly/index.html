@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Altitide Moon Jelly — Simple genomic DNA extraction</title>
+  <meta name="description" content="Join the waitlist for Altitide Moon Jelly, a simple genomic DNA extraction kit built for educators and scientists without access to traditional laboratory equipment.">
+  <style>
+    :root {
+      --ink:#101820;
+      --muted:#56636f;
+      --blue:#35a9dc;
+      --blue-dark:#147ca9;
+      --aqua:#dff6fb;
+      --paper:#fbfcfd;
+      --line:#dce8ed;
+      --white:#fff;
+    }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      margin:0; font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color:var(--ink); background:var(--paper); line-height:1.5;
+    }
+    .nav {
+      max-width:1180px; margin:auto; padding:22px 28px; display:flex;
+      justify-content:space-between; align-items:center;
+    }
+    .brand { display:flex; align-items:center; gap:11px; font-weight:800; letter-spacing:.08em; font-size:15px; }
+    .brand img { width:34px; height:34px; object-fit:contain; }
+    .nav a { color:var(--ink); text-decoration:none; font-size:14px; font-weight:650; }
+    .hero {
+      max-width:1180px; margin:18px auto 0; padding:36px 28px 78px;
+      display:grid; grid-template-columns:1.02fr .98fr; gap:60px; align-items:center;
+    }
+    .eyebrow { color:var(--blue-dark); font-size:13px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; }
+    h1 { font-size:clamp(52px,7vw,88px); line-height:.92; letter-spacing:-.055em; margin:14px 0 24px; }
+    .sub { font-size:21px; max-width:610px; color:var(--muted); margin-bottom:32px; }
+    .form {
+      background:var(--white); border:1px solid var(--line); border-radius:18px; padding:8px;
+      display:flex; max-width:600px; box-shadow:0 18px 55px rgba(19,66,88,.10);
+    }
+    input {
+      flex:1; min-width:0; border:0; outline:0; padding:16px 18px; font-size:16px;
+      background:transparent; color:var(--ink);
+    }
+    button {
+      border:0; border-radius:12px; padding:15px 22px; background:var(--ink); color:#fff;
+      font-size:15px; font-weight:800; cursor:pointer; transition:.2s transform,.2s background;
+    }
+    button:hover { transform:translateY(-1px); background:#263641; }
+    button:disabled { opacity:.6; cursor:wait; transform:none; }
+    .fine { color:#7a8790; font-size:12px; margin-top:12px; }
+    .status { min-height:24px; margin-top:12px; font-weight:700; font-size:14px; }
+    .product {
+      position:relative; background:linear-gradient(145deg,#edfaff,#d7f1f8); border-radius:30px;
+      padding:34px; overflow:hidden; box-shadow:0 28px 80px rgba(18,92,117,.15);
+    }
+    .product:before { content:""; position:absolute; width:320px; height:320px; border-radius:50%; background:#fff; opacity:.55; right:-100px; top:-90px; }
+    .product img { position:relative; display:block; width:100%; border-radius:20px; mix-blend-mode:multiply; }
+    .badge { position:absolute; left:48px; bottom:48px; background:#fff; border-radius:999px; padding:9px 14px; font-size:12px; font-weight:800; box-shadow:0 10px 30px rgba(0,0,0,.08); }
+    .section { border-top:1px solid var(--line); }
+    .grid {
+      max-width:1180px; margin:auto; padding:82px 28px; display:grid;
+      grid-template-columns:repeat(3,1fr); gap:20px;
+    }
+    .card { background:#fff; border:1px solid var(--line); border-radius:20px; padding:30px; }
+    .num { font-size:13px; font-weight:900; color:var(--blue-dark); }
+    .card h3 { margin:12px 0 8px; font-size:21px; letter-spacing:-.02em; }
+    .card p { margin:0; color:var(--muted); }
+    .statement { background:var(--ink); color:#fff; }
+    .statement-inner { max-width:900px; margin:auto; padding:92px 28px; text-align:center; }
+    .statement h2 { font-size:clamp(34px,5vw,58px); line-height:1.02; letter-spacing:-.04em; margin:0 0 18px; }
+    .statement p { margin:auto; max-width:700px; color:#c8d4da; font-size:18px; }
+    footer { max-width:1180px; margin:auto; padding:28px; display:flex; justify-content:space-between; color:#78858e; font-size:12px; }
+    @media (max-width:820px) {
+      .hero { grid-template-columns:1fr; gap:34px; padding-top:20px; }
+      .grid { grid-template-columns:1fr; }
+      .form { flex-direction:column; }
+      button { width:100%; }
+      h1 { font-size:58px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="nav">
+    <div class="brand"><img src="/images/altitideLogo.png">
+       <a href="#waitlist">Join the waitlist →</a>
+  </header>
+
+  <main>
+    <section class="hero" id="waitlist">
+      <div>
+        <div class="eyebrow">Introducing Moon Jelly</div>
+        <h1>DNA extraction.<br>Without the lab.</h1>
+        <p class="sub">
+          A simple genomic DNA extraction kit built for educators and scientists
+          who don't have access to traditional laboratory equipment.
+        </p>
+        <form class="form" id="waitlistForm">
+          <input id="email" name="email" type="email" autocomplete="email" placeholder="Your email address" required aria-label="Email address">
+          <button id="submitBtn" type="submit">Join the waitlist</button>
+        </form>
+        <div class="status" id="status" role="status" aria-live="polite"></div>
+        <div class="fine">We'll email you a confirmation and occasional Moon Jelly updates. No spam.</div>
+      </div>
+
+      <div class="product">
+        <img src="/images/moonJelly.png">
+        <div class="badge">MOON JELLY · GENOMIC DNA</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="grid">
+        <article class="card">
+          <div class="num">01</div>
+          <h3>Simple by design</h3>
+          <p>Designed around straightforward sample preparation so more people can access genomic DNA workflows.</p>
+        </article>
+        <article class="card">
+          <div class="num">02</div>
+          <h3>Equipment-light</h3>
+          <p>Built for settings where conventional centrifuges, mixers and other laboratory infrastructure aren't available.</p>
+        </article>
+        <article class="card">
+          <div class="num">03</div>
+          <h3>Made to teach & discover</h3>
+          <p>A practical platform for classrooms, field-oriented science and resource-constrained research environments.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="statement">
+      <div class="statement-inner">
+        <h2>Put genomic DNA within reach.</h2>
+        <p>Moon Jelly is part of Altitide's mission to make high-quality nucleic-acid workflows simpler, more scalable and more accessible.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 Altitide</span>
+    <span>Moon Jelly · Waitlist</span>
+  </footer>
+
+  <script>
+    const form = document.getElementById('waitlistForm');
+    const email = document.getElementById('email');
+    const status = document.getElementById('status');
+    const button = document.getElementById('submitBtn');
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      status.textContent = '';
+      button.disabled = true;
+      button.textContent = 'Joining…';
+
+      try {
+        const response = await fetch('/api/waitlist', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: email.value.trim() })
+        });
+        const data = await response.json();
+
+        if (!response.ok) throw new Error(data.error || 'Something went wrong.');
+        status.textContent = 'You’re on the list. Check your inbox for a confirmation email.';
+        email.value = '';
+      } catch (error) {
+        status.textContent = error.message || 'Unable to join right now. Please try again.';
+      } finally {
+        button.disabled = false;
+        button.textContent = 'Join the waitlist';
+      }
+    });
+  </script>
+</body>
+</html>
