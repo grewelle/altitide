@@ -57,11 +57,11 @@
     .fine { color:#7a8790; font-size:12px; margin-top:12px; }
     .status { min-height:24px; margin-top:12px; font-weight:700; font-size:14px; }
     .product {
-      position:relative; background:linear-gradient(145deg,#edfaff,#d7f1f8); border-radius:30px;
+      position:relative; bottom: 200px; background:linear-gradient(145deg,#edfaff,#d7f1f8); border-radius:30px;
       padding:34px; overflow:hidden; box-shadow:0 28px 80px rgba(18,92,117,.15);
     }
     .product:before { content:""; position:absolute; width:320px; height:320px; border-radius:50%; background:#fff; opacity:.55; right:-100px; top:-90px; }
-    .product img { position:relative; display:block; width:100%; border-radius:20px; mix-blend-mode:multiply; }
+    .product img { position:relative; bottom: 200 px; display:block; width:100%; border-radius:20px; mix-blend-mode:multiply; }
     .badge { position:absolute; left:48px; bottom:48px; background:#fff; border-radius:999px; padding:9px 14px; font-size:12px; font-weight:800; box-shadow:0 10px 30px rgba(0,0,0,.08); }
     .section { border-top:1px solid var(--line); }
     .grid {
@@ -397,39 +397,194 @@
                             </h2>
                       
                             <label class="option">
-                              <input type="checkbox" name="who" value="saliva">
+                              <input type="checkbox" name="what" value="saliva">
                               <span class="checkmark"></span>
                               <span>saliva</span>
                             </label>
                       
                             <label class="option">
-                              <input type="checkbox" name="who" value="fruit">
+                              <input type="checkbox" name="what" value="fruit">
                               <span class="checkmark"></span>
                               <span>fruit</span>
                             </label>
                       
                             <label class="option">
-                              <input type="checkbox" name="who" value="plant">
+                              <input type="checkbox" name="what" value="plant">
                               <span class="checkmark"></span>
                               <span>other plant material</span>
                             </label>
                       
                             <label class="option">
-                              <input type="checkbox" name="who" value="cheek">
+                              <input type="checkbox" name="what" value="cheek">
                               <span class="checkmark"></span>
                               <span>cheek cells</span>
                             </label>
                       
                             <label class="option">
-                              <input type="checkbox" name="who" value="bio">
+                              <input type="checkbox" name="what" value="bio">
                               <span class="checkmark"></span>
                               <span>classroom-safe biological samples</span>
                             </label>
 
                               <label class="option">
-                              <input type="checkbox" name="who" value="other">
+                              <input type="checkbox" name="what" value="other">
                               <span class="checkmark"></span>
                               <span>other</span>
+                            </label>
+                      
+                            <input
+                              type="text"
+                              name="contact_other"
+                              class="other-input"
+                              aria-label="Other contact method"
+                            >
+                      
+                          </section>
+
+                           <section class="question">
+
+                            <h2 class="question-title">
+                              4. Approximately how many people would be using the kit?
+                            </h2>
+                      
+                            <label class="option">
+                              <input type="checkbox" name="many" value="5">
+                              <span class="checkmark"></span>
+                              <span>1-5</span>
+                            </label>
+                      
+                            <label class="option">
+                              <input type="checkbox" name="many" value="15">
+                              <span class="checkmark"></span>
+                              <span>6-15</span>
+                            </label>
+                      
+                            <label class="option">
+                              <input type="checkbox" name="many" value="30">
+                              <span class="checkmark"></span>
+                              <span>16-30</span>
+                            </label>
+                      
+                            <label class="option">
+                              <input type="checkbox" name="many" value="31">
+                              <span class="checkmark"></span>
+                              <span>31+</span>
+                            </label>
+                      
+                          </section>
+
+                          <section class="question">
+
+                            <h2 class="question-title">
+                              5. What equipment do you currently have?
+                            </h2>
+                      
+                            <label class="option">
+                              <input type="checkbox" name="equipment" value="none">
+                              <span class="checkmark"></span>
+                              <span>no laboratory equipment</span>
+                            </label>
+                      
+                            <label class="option">
+                              <input type="checkbox" name="equipment" value="traditional">
+                              <span class="checkmark"></span>
+                              <span>a traditional science laboratory</span>
+                            </label>
+                      
+                            <label class="option">
+                              <input type="checkbox" name="equipment" value="minimal">
+                              <span class="checkmark"></span>
+                              <span>micropipettes, centrifuge, water bath</span>
+                            </label>
+                      
+                            <label class="option">
+                              <input type="checkbox" name="equipment" value="basic">
+                              <span class="checkmark"></span>
+                              <span>basic classroom equipment</span>
+                            </label>
+
+                              <label class="option">
+                              <input type="checkbox" name="equipment" value="other">
+                              <span class="checkmark"></span>
+                              <span>other</span>
+                            </label>
+                      
+                            <input
+                              type="text"
+                              name="contact_other"
+                              class="other-input"
+                              aria-label="Other contact method"
+                            >
+                      
+                          </section>
+
+                          <section class="question">
+
+                            <h2 class="question-title">
+                              6. How did you hear about Altitide or the Moon Jelly Kit?
+                            </h2>
+                      
+                            <label class="option">
+                              <input type="checkbox" name="hear" value="social">
+                              <span class="checkmark"></span>
+                              <span>social media</span>
+                            </label>
+                      
+                            <label class="option">
+                              <input type="checkbox" name="hear" value="colleague">
+                              <span class="checkmark"></span>
+                              <span>a colleague</span>
+                            </label>
+                      
+                            <label class="option">
+                              <input type="checkbox" name="hear" value="education">
+                              <span class="checkmark"></span>
+                              <span>a school/education network</span>
+                            </label>
+                      
+                            <label class="option">
+                              <input type="checkbox" name="hear" value="conference">
+                              <span class="checkmark"></span>
+                              <span>a conference or event</span>
+                            </label>
+
+                            <label class="option">
+                              <input type="checkbox" name="hear" value="website">
+                              <span class="checkmark"></span>
+                              <span>a website/search</span>
+                            </label>
+
+                              <label class="option">
+                              <input type="checkbox" name="hear" value="other">
+                              <span class="checkmark"></span>
+                              <span>other</span>
+                            </label>
+                      
+                            <input
+                              type="text"
+                              name="contact_other"
+                              class="other-input"
+                              aria-label="Other contact method"
+                            >
+                      
+                          </section>
+
+                           <section class="question">
+
+                            <h2 class="question-title">
+                              7. Would you be interested in receiving future updates from Altitide??
+                            </h2>
+                      
+                            <label class="option">
+                              <input type="checkbox" name="updates" value="yes">
+                              <span class="checkmark"></span>
+                              <span>yes</span>
+                            </label>
+                      
+                            <label class="option">
+                              <input type="checkbox" name="updates" value="no">
+                              <span class="checkmark"></span>
+                              <span>no</span>
                             </label>
                       
                             <input
@@ -449,57 +604,6 @@
                                 <div class="form-group">
                                     <label for="email">Email <span class="required">*</span></label>
                                     <input type="email" id="email" name="email" required placeholder="jane@company.com">
-                                </div>
-
-                              
-                              
-                              <div class="form-group">
-                                    <label for="third">What type of sample are you considering using?</label>
-                                    <input list="thirds" id="third" name="third" placeholder="saliva">
-                                    <datalist id="thirds">
-                                      <option value="saliva">
-                                      <option value="strawberries or other fruit">
-                                      <option value="plant material">
-                                      <option value="cheek cells">
-                                      <option value="classroom-safe biological samples">
-                                      <option value="another type of sample">
-                                    </datalist>   
-                                </div>
-                              <div class="form-group">
-                                    <label for="fourth">Approximately how many people would be using the kit?</label>
-                                    <input list="fourths" id="fourth" name="fourth" placeholder="1-5">
-                                    <datalist id="fourths">
-                                      <option value="1-5">
-                                      <option value="6-15">
-                                      <option value="16-30">
-                                      <option value="31+">
-                                    </datalist>   
-                                </div>
-                              <div class="form-group">
-                                    <label for="fifth">What equipment do you currently have?</label>
-                                    <input list="fifths" id="fifth" name="fifth" placeholder="no laboratory equipment">
-                                    <datalist id="fifths">
-                                      <option value="no laboratory equipment">
-                                      <option value="a traditional science laboratory">
-                                      <option value="micropipettes, centrifuge, water bath">
-                                      <option value="basic classroom equipment">
-                                    </datalist>   
-                                </div>
-                              <div class="form-group">
-                                    <label for="sixth">How did you hear about Altitide or the Moon Jelly Kit?</label>
-                                    <input list="sixths" id="sixth" name="sixth" placeholder="social media">
-                                    <datalist id="sixths">
-                                      <option value="social media">
-                                      <option value="a colleague">
-                                      <option value="a school/education network">
-                                      <option value="a conference or event">
-                                      <option value="a website/search">
-                                      <option value="another source">
-                                    </datalist>   
-                                </div>
-                              <div class="form-group">
-                                    <label for="checkbox">Would you be interested in receiving future updates from Altitide?</span></label> 
-                                    <input type="checkbox" id="checkbox" name="checkbox">
                                 </div>
 
                               
