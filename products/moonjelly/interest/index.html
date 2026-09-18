@@ -84,6 +84,153 @@
       button { width:100%; }
       h1 { font-size:58px; }
     }
+
+    
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #ffffff;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #111111;
+    }
+
+    .survey {
+      position: relative;
+      width: 100%;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 42px 52px 70px;
+      overflow: hidden;
+    }
+
+
+    .question {
+      margin-bottom: 54px;
+    }
+
+    .question-title {
+      margin: 0 0 22px;
+      font-size: 19px;
+      line-height: 1.35;
+      font-weight: 700;
+    }
+
+    .option {
+      display: flex;
+      align-items: center;
+      min-height: 34px;
+      margin: 0 0 3px;
+      font-size: 16px;
+      line-height: 1.4;
+      cursor: pointer;
+    }
+
+    /* Hide native checkbox */
+    .option input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* Custom checkbox */
+    .checkmark {
+      position: relative;
+      flex: 0 0 25px;
+      width: 25px;
+      height: 25px;
+      margin-right: 16px;
+      border: 2px solid #d5d5d5;
+      background: #fff;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+    }
+
+    /* Red check */
+    .option input:checked + .checkmark::after {
+      content: "";
+      position: absolute;
+      left: 5px;
+      top: 0px;
+      width: 9px;
+      height: 17px;
+      border: solid #d9273f;
+      border-width: 0 3px 3px 0;
+      transform: rotate(45deg);
+    }
+
+    .other-input {
+      display: block;
+      width: calc(100% - 41px);
+      height: 42px;
+      margin: 4px 0 0 41px;
+      border: 2px solid #d6d6d6;
+      background: #ffffff;
+      font-size: 16px;
+      padding: 7px 10px;
+      outline: none;
+    }
+
+    .other-input:focus {
+      border-color: #999999;
+    }
+
+    /* Question 3 */
+    .radio-option {
+      display: flex;
+      align-items: center;
+      min-height: 34px;
+      margin-bottom: 3px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .radio-option input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .radio-mark {
+      position: relative;
+      width: 25px;
+      height: 25px;
+      flex: 0 0 25px;
+      margin-right: 16px;
+      border: 2px solid #d5d5d5;
+      border-radius: 50%;
+      background: white;
+    }
+
+    .radio-option input:checked + .radio-mark::after {
+      content: "";
+      position: absolute;
+      width: 11px;
+      height: 11px;
+      top: 5px;
+      left: 5px;
+      border-radius: 50%;
+      background: #d9273f;
+    }
+
+
+    /* Mobile */
+    @media (max-width: 600px) {
+      .survey {
+        padding: 32px 25px 55px;
+      }
+
+      .question-title {
+        font-size: 17px;
+      }
+
+      .option,
+      .radio-option {
+        font-size: 15px;
+      }
+    }
+  
   </style>
 </head>
 <body>
@@ -123,6 +270,51 @@
                             <!-- Honeypot field - hidden from users, catches bots -->
                             <input type="text" name="_gotcha" style="display:none">
 
+                            <section class="question">
+
+                            <h2 class="question-title">
+                              1. During your most recent purchase, how did you contact us?
+                            </h2>
+                      
+                            <label class="option">
+                              <input type="checkbox" name="contact" value="in-person">
+                              <span class="checkmark"></span>
+                              <span>In Person</span>
+                            </label>
+                      
+                            <label class="option">
+                              <input type="checkbox" name="contact" value="telephone">
+                              <span class="checkmark"></span>
+                              <span>By Telephone</span>
+                            </label>
+                      
+                            <label class="option">
+                              <input type="checkbox" name="contact" value="internet">
+                              <span class="checkmark"></span>
+                              <span>Via Internet</span>
+                            </label>
+                      
+                            <label class="option">
+                              <input type="checkbox" name="contact" value="dealer">
+                              <span class="checkmark"></span>
+                              <span>Through a dealer or retailer</span>
+                            </label>
+                      
+                            <label class="option">
+                              <input type="checkbox" name="contact" value="other">
+                              <span class="checkmark"></span>
+                              <span>Other</span>
+                            </label>
+                      
+                            <input
+                              type="text"
+                              name="contact_other"
+                              class="other-input"
+                              aria-label="Other contact method"
+                            >
+                      
+                          </section>
+
                             <div class="form-row">
                                 <div class="form-group">
                                     <label for="name">Name <span class="required">*</span></label>
@@ -132,6 +324,8 @@
                                     <label for="email">Email <span class="required">*</span></label>
                                     <input type="email" id="email" name="email" required placeholder="jane@company.com">
                                 </div>
+
+                              
                               <div class="form-group">
                                     <label for="first">What interests you most about the Moon Jelly Kit?</label>
                                     <input list="firsts" id="first" name="first" placeholder="classroom activity">
