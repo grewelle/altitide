@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="/images/altitideLogo.png" type="image/x-icon">
+  <link rel="stylesheet" href="contact.css">
+  <link rel="stylesheet" href="../../../styles.css">
+  <title>Altitide Moon Jelly — Simple genomic DNA extraction</title>
+  <meta name="description" content="Join the waitlist for Altitide Moon Jelly, a simple genomic DNA extraction kit built for educators and scientists without access to traditional laboratory equipment.">
+  <style>
+    :root {
+      --ink:#101820;
+      --muted:#56636f;
+      --blue:#35a9dc;
+      --blue-dark:#147ca9;
+      --aqua:#dff6fb;
+      --paper:#fbfcfd;
+      --line:#dce8ed;
+      --white:#fff;
+    }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      margin:0; font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color:var(--ink); background:var(--paper); line-height:1.5;
+    }
+    
+    .nav2 {
+      max-width:1180px; margin:auto; padding:22px 28px; display:flex;
+      justify-content:space-between; align-items:center;
+    }
+    .brand { display:flex; align-items:center; gap:11px; font-weight:800; letter-spacing:.08em; font-size:15px; }
+    .brand img { width:34px; height:34px; object-fit:contain; }
+    .nav2 a { color:var(--ink); text-decoration:none; font-size:14px; font-weight:650; }
+    .hero {
+      max-width:1180px; margin:18px auto 0; padding:36px 28px 78px;
+      display:grid; grid-template-columns:1.02fr .98fr; gap:60px; align-items:center;
+    }
+    .eyebrow { color:var(--blue-dark); font-size:13px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; }
+    h1 { font-size:clamp(52px,7vw,88px); line-height:.92; letter-spacing:-.055em; margin:14px 0 24px; }
+    .sub { font-size:21px; max-width:610px; color:var(--muted); margin-bottom:32px; }
+    .form {
+      background:var(--white); border:1px solid var(--line); border-radius:18px; padding:8px;
+      display:flex; max-width:600px; box-shadow:0 18px 55px rgba(19,66,88,.10);
+    }
+    input {
+      flex:1; min-width:0; border:0; outline:0; padding:16px 18px; font-size:16px;
+      background:transparent; color:var(--ink);
+    }
+    button {
+      border:0; border-radius:12px; padding:15px 22px; background:var(--ink); color:#fff;
+      font-size:15px; font-weight:800; cursor:pointer; transition:.2s transform,.2s background;
+    }
+    button:hover { transform:translateY(-1px); background:#263641; }
+    button:disabled { opacity:.6; cursor:wait; transform:none; }
+    .fine { color:#7a8790; font-size:12px; margin-top:12px; }
+    .status { min-height:24px; margin-top:12px; font-weight:700; font-size:14px; }
+    .product {
+      position:relative; bottom: 1200px; background:linear-gradient(145deg,#edfaff,#d7f1f8); border-radius:30px;
+      padding:34px; overflow:hidden; box-shadow:0 28px 80px rgba(18,92,117,.15);
+    }
+    .product:before { content:""; position:absolute; width:320px; height:320px; border-radius:50%; background:#fff; opacity:.55; right:-100px; top:-90px; }
+    .product img { position:relative; bottom: 1200 px; display:block; width:100%; border-radius:20px; mix-blend-mode:multiply; }
+    .badge { position:absolute; left:48px; bottom:48px; background:#fff; border-radius:999px; padding:9px 14px; font-size:12px; font-weight:800; box-shadow:0 10px 30px rgba(0,0,0,.08); }
+    .section { border-top:1px solid var(--line); }
+    .grid {
+      max-width:1180px; margin:auto; padding:82px 28px; display:grid;
+      grid-template-columns:repeat(3,1fr); gap:20px;
+    }
+    .card { background:#fff; border:1px solid var(--line); border-radius:20px; padding:30px; }
+    .num { font-size:13px; font-weight:900; color:var(--blue-dark); }
+    .card h3 { margin:12px 0 8px; font-size:21px; letter-spacing:-.02em; }
+    .card p { margin:0; color:var(--muted); }
+    .statement { background:var(--ink); color:#fff; }
+    .statement-inner { max-width:900px; margin:auto; padding:92px 28px; text-align:center; }
+    .statement h2 { font-size:clamp(34px,5vw,58px); line-height:1.02; letter-spacing:-.04em; margin:0 0 18px; }
+    .statement p { margin:auto; max-width:700px; color:#c8d4da; font-size:18px; }
+    footer { max-width:1180px; margin:auto; padding:28px; display:flex; justify-content:space-between; color:#78858e; font-size:12px; }
+    @media (max-width:820px) {
+      .hero { grid-template-columns:1fr; gap:34px; padding-top:20px; }
+      .grid { grid-template-columns:1fr; }
+      .form { flex-direction:column; }
+      button { width:100%; }
+      h1 { font-size:58px; }
+    }
+
+    
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #ffffff;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #111111;
+    }
+
+    .survey {
+      position: relative;
+      width: 100%;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 42px 52px 70px;
+      overflow: hidden;
+    }
+
+
+    .question {
+      margin-bottom: 54px;
+    }
+
+    .question-title {
+      margin: 0 0 22px;
+      font-size: 19px;
+      line-height: 1.35;
+      font-weight: 700;
+    }
+
+    .option {
+      display: flex;
+      align-items: center;
+      min-height: 34px;
+      margin: 0 0 3px;
+      font-size: 16px;
+      line-height: 1.4;
+      cursor: pointer;
+    }
+
+    /* Hide native checkbox */
+    .option input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* Custom checkbox */
+    .checkmark {
+      position: relative;
+      flex: 0 0 25px;
+      width: 25px;
+      height: 25px;
+      margin-right: 16px;
+      border: 2px solid #d5d5d5;
+      background: #fff;
+      box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+    }
+
+    /* Red check */
+    .option input:checked + .checkmark::after {
+      content: "";
+      position: absolute;
+      left: 5px;
+      top: 0px;
+      width: 9px;
+      height: 17px;
+      border: solid #d9273f;
+      border-width: 0 3px 3px 0;
+      transform: rotate(45deg);
+    }
+
+    .other-input {
+      display: block;
+      width: calc(100% - 41px);
+      height: 42px;
+      margin: 4px 0 0 41px;
+      border: 2px solid #d6d6d6;
+      background: #ffffff;
+      font-size: 16px;
+      padding: 7px 10px;
+      outline: none;
+    }
+
+    .other-input:focus {
+      border-color: #999999;
+    }
+
+    /* Question 3 */
+    .radio-option {
+      display: flex;
+      align-items: center;
+      min-height: 34px;
+      margin-bottom: 3px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .radio-option input {
+      position: absolute;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .radio-mark {
+      position: relative;
+      width: 25px;
+      height: 25px;
+      flex: 0 0 25px;
+      margin-right: 16px;
+      border: 2px solid #d5d5d5;
+      border-radius: 50%;
+      background: white;
+    }
+
+    .radio-option input:checked + .radio-mark::after {
+      content: "";
+      position: absolute;
+      width: 11px;
+      height: 11px;
+      top: 5px;
+      left: 5px;
+      border-radius: 50%;
+      background: #d9273f;
+    }
+
+
+    /* Mobile */
+    @media (max-width: 600px) {
+      .survey {
+        padding: 32px 25px 55px;
+      }
+
+      .question-title {
+        font-size: 17px;
+      }
+
+      .option,
+      .radio-option {
+        font-size: 15px;
+      }
+    }
+  
+  </style>
+</head>
+<body>
+ <nav class="nav">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <img src="/images/altitideLogo.png" alt="Altitide" width="50" height="50">
+                Altitide
+            </a>
+            <div class="nav-links">
+                <a href="/">Home</a>
+                <a href="/products/" class="active">Products</a>
+                <a href="/blog/">Blog</a>
+                <a href="/services/">Services</a>
+                <a href="/about/">About</a>
+                <a href="/contact/" class="nav-cta">Get in Touch</a>
+            </div>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+  <main>
+    <section class="hero" id="waitlist">
+      <div>
+        <div class="eyebrow">Introducing Moon Jelly</div>
+        <h1>DNA extraction<br>without the lab.</h1>
+        <p class="sub">
+          A simple genomic DNA extraction kit built for educators and scientists
+          who don't have access to traditional laboratory equipment.
+        </p>
+
+        <form class="contact-form" action="https://formspree.io/f/mjyvdwpp" method="POST">
+                            <!-- Honeypot field - hidden from users, catches bots -->
+                            <input type="text" name="_gotcha" style="display:none">
+
+                            <section class="question">
+
+                            <h2 class="question-title">
+                              1. What interests you most about the Moon Jelly Kit?
+                            </h2>
+                      
+                            <label class="option">
+                              <input type="checkbox" name="interest" value="classroom">
+                              <span class="checkmark"></span>
+                              <span>classroom activity</span>
+                            </label>
+                      
+                            <label class="option">
+                              <input type="checkbox" name="interest" value="homeschool">
+                              <span class="checkmark"></span>
+                              <span>homeschool science</span>
+                            </label>
+                      
+                            <label class="option">
+                              <input type="checkbox" name="interest" value="camp">
+                              <span class="checkmark"></span>
+                              <span>science camp/program</span>
+                            </label>
+                      
+                            <label class="option">
+                              <input type="checkbox" name="interest" value="STEM">
+                              <span class="checkmark"></span>
+                              <span>STEM outreach</span>
+                            </label>
+                      
+                            <label class="option">
+                              <input type="checkbox" name="interest" value="personal">
+                              <span class="checkmark"></span>
+                              <span>personal learning</span>
+                            </label>
+
+                              <label class="option">
+                              <input type="checkbox" name="interest" value="research">
+                              <span class="checkmark"></span>
+                              <span>research</span>
+                            </label>
+
+                              <label class="option">
+                              <input type="checkbox" name="interest" value="other">
+                              <span class="checkmark"></span>
+                              <span>other</span>
+                            </label>
+                      
+                            <input
+                              type="text"
+                              name="interest_other"
+                              class="other-input"
+                              aria-label="Other contact method"
+                            >
+                      
+                          </section>
+
+                          <section class="question">
+
+                            <h2 class="question-title">
+                              2. Who would be using the kit?
+                            </h2>
+                      
+                            <label class="option">
+                              <input type="checkbox" name="who" value="educators">
+                              <span class="checkmark"></span>
+                              <span>educators</span>
+                            </label>
+                      
+                            <label class="option">
+                              <input type="checkbox" name="who" value="elementary">
+                              <span class="checkmark"></span>
+                              <span>elementary school students</span>
+                            </label>
+                      
+                            <label class="option">
+                              <input type="checkbox" name="who" value="middle">
+                              <span class="checkmark"></span>
+                              <span>middle school students</span>
+                            </label>
+                      
+                            <label class="option">
+                              <input type="checkbox" name="who" value="high">
+                              <span class="checkmark"></span>
+                              <span>high school students</span>
+                            </label>
+                      
+                            <label class="option">
+                              <input type="checkbox" name="who" value="college">
+                              <span class="checkmark"></span>
+                              <span>college students</span>
+                            </label>
+
+                              <label class="option">
+                              <input type="checkbox" name="who" value="researchers">
+                              <span class="checkmark"></span>
+                              <span>researchers</span>
+                            </label>
+
+                            <label class="option">
+                              <input type="checkbox" name="who" value="mixed">
+                              <span class="checkmark"></span>
+                              <span>mixed-age group</span>
+                            </label>
+
+                              <label class="option">
+                              <input type="checkbox" name="who" value="other">
+                              <span class="checkmark"></span>
+                              <span>other</span>
+                            </label>
+                      
+                            <input
+                              type="text"
+                              name="who_other"
+                              class="other-input"
+                              aria-label="Other contact method"
+                            >
+                      
+                          </section>
+
+                           <section class="question">
+
+                            <h2 class="question-title">
+                              3. What type of sample are you considering using?
+                            </h2>
+                      
+                            <label class="option">
+                              <input type="checkbox" name="what" value="saliva">
+                              <span class="checkmark"></span>
+                              <span>saliva</span>
+                            </label>
+                      
+                            <label class="option">
+                              <input type="checkbox" name="what" value="fruit">
+                              <span class="checkmark"></span>
+                              <span>fruit</span>
+                            </label>
+                      
+                            <label class="option">
+                              <input type="checkbox" name="what" value="plant">
+                              <span class="checkmark"></span>
+                              <span>other plant material</span>
+                            </label>
+                      
+                            <label class="option">
+                              <input type="checkbox" name="what" value="cheek">
+                              <span class="checkmark"></span>
+                              <span>cheek cells</span>
+                            </label>
+                      
+                            <label class="option">
+                              <input type="checkbox" name="what" value="bio">
+                              <span class="checkmark"></span>
+                              <span>classroom-safe biological samples</span>
+                            </label>
+
+                              <label class="option">
+                              <input type="checkbox" name="what" value="other">
+                              <span class="checkmark"></span>
+                              <span>other</span>
+                            </label>
+                      
+                            <input
+                              type="text"
+                              name="what_other"
+                              class="other-input"
+                              aria-label="Other contact method"
+                            >
+                      
+                          </section>
+
+                           <section class="question">
+
+                            <h2 class="question-title">
+                              4. Approximately how many people would be using the kit?
+                            </h2>
+                      
+                            <label class="option">
+                              <input type="radio" name="many" value="5">
+                              <span class="checkmark"></span>
+                              <span>1-5</span>
+                            </label>
+                      
+                            <label class="option">
+                              <input type="radio" name="many" value="15">
+                              <span class="checkmark"></span>
+                              <span>6-15</span>
+                            </label>
+                      
+                            <label class="option">
+                              <input type="radio" name="many" value="30">
+                              <span class="checkmark"></span>
+                              <span>16-30</span>
+                            </label>
+                      
+                            <label class="option">
+                              <input type="radio" name="many" value="31">
+                              <span class="checkmark"></span>
+                              <span>31+</span>
+                            </label>
+                      
+                          </section>
+
+                          <section class="question">
+
+                            <h2 class="question-title">
+                              5. What equipment do you currently have?
+                            </h2>
+                      
+                            <label class="option">
+                              <input type="checkbox" name="equipment" value="none">
+                              <span class="checkmark"></span>
+                              <span>no laboratory equipment</span>
+                            </label>
+                      
+                            <label class="option">
+                              <input type="checkbox" name="equipment" value="traditional">
+                              <span class="checkmark"></span>
+                              <span>a traditional science laboratory</span>
+                            </label>
+                      
+                            <label class="option">
+                              <input type="checkbox" name="equipment" value="minimal">
+                              <span class="checkmark"></span>
+                              <span>micropipettes, centrifuge, water bath</span>
+                            </label>
+                      
+                            <label class="option">
+                              <input type="checkbox" name="equipment" value="basic">
+                              <span class="checkmark"></span>
+                              <span>basic classroom equipment</span>
+                            </label>
+
+                              <label class="option">
+                              <input type="checkbox" name="equipment" value="other">
+                              <span class="checkmark"></span>
+                              <span>other</span>
+                            </label>
+                      
+                            <input
+                              type="text"
+                              name="equipment_other"
+                              class="other-input"
+                              aria-label="Other contact method"
+                            >
+                      
+                          </section>
+
+                          <section class="question">
+
+                            <h2 class="question-title">
+                              6. How did you hear about Altitide or the Moon Jelly Kit?
+                            </h2>
+                      
+                            <label class="option">
+                              <input type="checkbox" name="hear" value="social">
+                              <span class="checkmark"></span>
+                              <span>social media</span>
+                            </label>
+                      
+                            <label class="option">
+                              <input type="checkbox" name="hear" value="colleague">
+                              <span class="checkmark"></span>
+                              <span>a colleague</span>
+                            </label>
+                      
+                            <label class="option">
+                              <input type="checkbox" name="hear" value="education">
+                              <span class="checkmark"></span>
+                              <span>a school/education network</span>
+                            </label>
+                      
+                            <label class="option">
+                              <input type="checkbox" name="hear" value="conference">
+                              <span class="checkmark"></span>
+                              <span>a conference or event</span>
+                            </label>
+
+                            <label class="option">
+                              <input type="checkbox" name="hear" value="website">
+                              <span class="checkmark"></span>
+                              <span>a website/search</span>
+                            </label>
+
+                              <label class="option">
+                              <input type="checkbox" name="hear" value="other">
+                              <span class="checkmark"></span>
+                              <span>other</span>
+                            </label>
+                      
+                            <input
+                              type="text"
+                              name="hear_other"
+                              class="other-input"
+                              aria-label="Other contact method"
+                            >
+                      
+                          </section>
+
+                           <section class="question">
+
+                            <h2 class="question-title">
+                              7. Would you be interested in receiving future updates from Altitide?
+                            </h2>
+                      
+                            <label class="option">
+                              <input type="radio" name="updates" value="yes">
+                              <span class="checkmark"></span>
+                              <span>yes</span>
+                            </label>
+                      
+                            <label class="option">
+                              <input type="radio" name="updates" value="no">
+                              <span class="checkmark"></span>
+                              <span>no</span>
+                            </label>
+                      
+                      
+                          </section>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Name <span class="required">*</span></label>
+                                    <input type="text" id="name" name="name" required placeholder="Jane Doe">
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email <span class="required">*</span></label>
+                                    <input type="email" id="email" name="email" required placeholder="jane@company.com">
+                                </div>
+
+                              
+                            </div>
+
+                            <div class="form-footer">
+                                <button type="submit" class="btn btn-primary btn-large">Submit</button>
+                            </div>
+                        </form>
+      </div>
+
+      
+    </section>
+
+    <section class="section">
+      <div class="grid">
+        <article class="card">
+          <div class="num">01</div>
+          <h3>Simple by design</h3>
+          <p>Designed around straightforward sample preparation so more people can access genomic DNA workflows.</p>
+        </article>
+        <article class="card">
+          <div class="num">02</div>
+          <h3>Equipment-light</h3>
+          <p>Built for settings where conventional centrifuges, mixers and other laboratory infrastructure aren't available.</p>
+        </article>
+        <article class="card">
+          <div class="num">03</div>
+          <h3>Made to teach & discover</h3>
+          <p>A practical platform for classrooms, field-oriented science and resource-constrained research environments.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="statement">
+      <div class="statement-inner">
+        <h2 style="color: white;">Put genomic DNA within reach.</h2>
+        <p>Moon Jelly is part of Altitide's mission to make high-quality nucleic-acid workflows simpler, more scalable and more accessible.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 Altitide</span>
+    <span>Moon Jelly · Waitlist</span>
+  </footer>
+
+  <script>
+    const form = document.getElementById('waitlistForm');
+    const email = document.getElementById('email');
+    const status = document.getElementById('status');
+    const button = document.getElementById('submitBtn');
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      status.textContent = '';
+      button.disabled = true;
+      button.textContent = 'Joining…';
+
+      try {
+        const response = await fetch('/api/waitlist', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email: email.value.trim() })
+        });
+        const data = await response.json();
+
+        if (!response.ok) throw new Error(data.error || 'Something went wrong.');
+        status.textContent = 'You’re on the list. Check your inbox for a confirmation email.';
+        email.value = '';
+      } catch (error) {
+        status.textContent = error.message || 'Unable to join right now. Please try again.';
+      } finally {
+        button.disabled = false;
+        button.textContent = 'Join the waitlist';
+      }
+    });
+  </script>
+</body>
+</html>
