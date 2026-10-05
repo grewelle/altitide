@@ -1,0 +1,10 @@
+{
+  "name": "altitide-bowhead-waitlist-interest-form",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Altitide Bowhead waitlist interest form with automated email confirmation.",
+  "scripts": {},
+  "engines": {
+    "node": ">=18"
+  }
+}
