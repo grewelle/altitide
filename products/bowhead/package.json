@@ -1,0 +1,10 @@
+{
+  "name": "altitide-bowhead-waitlist",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Altitide Bowhead waitlist landing page with automated email confirmation.",
+  "scripts": {},
+  "engines": {
+    "node": ">=18"
+  }
+}
